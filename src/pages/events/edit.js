@@ -47,7 +47,7 @@ function EventsCreate() {
 
   const [isLoading, setIsLoading] = useState(false);
 
-  const fetchOneCategories = async () => {
+  const fetchOneEvents = async () => {
     const res = await getData(`/cms/events/${eventId}`);
 
     setForm({
@@ -75,7 +75,7 @@ function EventsCreate() {
   };
 
   useEffect(() => {
-    fetchOneCategories();
+    fetchOneEvents();
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
@@ -241,7 +241,7 @@ function EventsCreate() {
       <BreadCrumb
         textSecound={"Events"}
         urlSecound={"/events"}
-        textThird="Create"
+        textThird="Edit"
       />
       {alert.status && <Alert type={alert.type} message={alert.message} />}
       <Form

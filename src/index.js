@@ -4,10 +4,11 @@ import "./index.css";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import "bootstrap/dist/css/bootstrap.min.css";
-import "react-date-range/dist/styles.css";
-import "react-date-range/dist/theme/default.css";
+
 import { Provider } from "react-redux";
 import store from "./redux/store";
+import "react-date-range/dist/styles.css"; // main css file
+import "react-date-range/dist/theme/default.css"; // theme css file
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(

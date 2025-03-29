@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { Col, Container, Row } from "react-bootstrap";
 import BreadCrumb from "../../components/Breadcrumb";
 import Table from "../../components/TableWithAction";
@@ -16,7 +16,7 @@ function OrderPage() {
   const notif = useSelector((state) => state.notif);
   const orders = useSelector((state) => state.orders);
 
-  let [isShowed, setIsShowed] = React.useState(false);
+  let [isShowed, setIsShowed] = useState(false);
 
   useEffect(() => {
     dispatch(fetchOrders());
